@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --primary-color: #4891ff;
+  --light-color: #f4f4f6;
+  --dark-color: #111;
+
+}
+
+body {
+  font-family: 'Clash Display', sans-serif;
+  font-size:16px;
+  line-height: 1.5;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  padding: 20px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .main-menu  ul {
+  display: flex;
+}
+
+.navbar ul li a{
+  padding: 10px 20px;
+  display: block;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+  color: var(--primary-color);
+}
+/* Hero */
+.hero {
+  margin-bottom: 50px;
+}
+
+.hero .container{
+  background: url();
+  background-size: contain;
+  background-position: center bottom;
+  height: 550px;
+}
+
+.hero .content  {
+  width: 70%;
+}
+
+.hero .hero-text {
+  width: 70%;
+  margin-bottom: 20px;
+}
+/* Utility Classes */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Text Classes */
+.text-xxl {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 40px 30px 30px;
+}
+
+.text-xl {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 40px 30px 20px;
+}
+
+.text-lg {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 30px 30px 20px;
+}
+
+.text-md {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 60px 30px 10px;
+  color: gray;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 10px 30px 5px;
+  color: gray;
+}
+
+.linkedin {
+  margin: 10px 30px 10px;
+  text-decoration: underline;
+  padding-bottom: 50px;
+  
+}
+
+.email {
+  text-decoration: underline;
+  padding-bottom: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card {
+  float: left;
+  margin-left: 30px;
+  width: 190px;
+  height: 254px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+ }
+ 
+ .card-details {
+  color: black;
+  height: 100%;
+  gap: .5em;
+  display: grid;
+  place-content: center;
+ }
+ 
+ .card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #008bf8;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ 
+ .text-body {
+  color: rgb(134, 134, 134);
+ }
+ 
+ /*Text*/
+ .text-title {
+  font-size: 1.5em; 
+  font-weight: bold;
+ }
+ 
+ /*Hover*/
+ .card:hover {
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ 
+ .card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+/* Hamburger Button*/
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+  width: 30px;
+  height:3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  right: 0px;
+}
+
+.mobile-menu ul {
+  margin-top: 100px;
+  padding-right: 10px;
+}
+
+.mobile-menu ul li{
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a{
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+ /* Media Queries*/
+ @media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.5rem;
+  }
+ }
+
+ @media (max-width: 670px) {
+  .navbar .main-menu {
+    display: none; 
+  }
+
+  .navbar .hamburger-button {
+    display: block;
+  }
+
+
+  .hero .hero-content {
+
+    text-align: left;
+  }
+
+  .hero .hero-text {
+    text-align: left;
+    width: 95%;
+  
+  }
+
+ 
+
+
+ }
+
+ @media (max-width: 500px) {
+  
+ }
+
